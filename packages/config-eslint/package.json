@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "devDependencies": {
+    "@eslint/compat": "^1.2.2",
     "@eslint/js": "^9.14.0",
     "@vercel/style-guide": "^6.0.0",
     "eslint-config-turbo": "^2.0.0",

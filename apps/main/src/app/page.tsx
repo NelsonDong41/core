@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Card } from "@repo/ui/card";
+import React from "react";
 
 function Gradient({
   conic,

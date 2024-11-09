@@ -19,9 +19,8 @@ const legacy = compat.extends(
 
 const config = [...legacy,
 {
-  ignores: ['.next/', 'node_modules/', 'dist/', '.eslintrc.js', '**/*.css'],
+  ignores: [".next/", "node_modules/", ".turbo/"],
 },
-{files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"]},
 {
   rules: {
     'no-console': 'warn',
