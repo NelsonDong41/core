@@ -1,0 +1,25 @@
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+import js from "@eslint/js";
+import { FlatCompat } from "@eslint/eslintrc";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const compat = new FlatCompat({
+  baseDirectory: __dirname,
+  recommendedConfig: js.configs.recommended,
+  allConfig: js.configs.all
+});
+
+const legacy = compat.extends("next/core-web-vitals", "next/typescript");
+
+const config = [...legacy,
+{
+  ignores: [".next/", "node_modules/", ".turbo/"],
+},
+{
+  rules: {
+    "@next/next/no-duplicate-head": "off"
+  },
+}]
+export default config;
