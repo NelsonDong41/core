@@ -1,5 +1,5 @@
 import React from "react";
 
 export default function NotFound(): JSX.Element {
-  return <div />;
+  return <div>not found</div>;
 }
