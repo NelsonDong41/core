@@ -1,4 +1,5 @@
 {
+  "name": "core",
   "private": true,
   "scripts": {
     "build": "turbo build",
@@ -14,9 +15,8 @@
     "turbo": "^2.2.3"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=20"
   },
-  "name": "with-tailwind",
   "packageManager": "yarn@1.22.22",
   "workspaces": [
     "apps/*",
