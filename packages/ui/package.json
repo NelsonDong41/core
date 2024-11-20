@@ -9,7 +9,8 @@
   ],
   "exports": {
     "./styles.css": "./dist/index.css",
-    "./card": "./src/card.tsx"
+    "./card": "./src/card.tsx",
+    "./streetSign": "./src/streetSign.tsx"
   },
   "license": "MIT",
   "scripts": {
@@ -31,5 +32,8 @@
     "eslint": "^9.14.0",
     "postcss": "^8.4.35",
     "tailwindcss": "^3.4.1"
+  },
+  "dependencies": {
+    "@fontsource/big-shoulders-display": "^5.1.0"
   }
 }
