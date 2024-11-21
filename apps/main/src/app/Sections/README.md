@@ -2,7 +2,7 @@ Example of setting up a section
 
 ```tsx
 import React from "react";
-import Section, { ForegroundItems } from "../Section";
+import { Section, ForegroundItems, Coordinate } from "@repo/ui";
 
 const background = {
   /* some component */

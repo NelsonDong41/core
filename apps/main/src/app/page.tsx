@@ -1,4 +1,4 @@
-import { Stats } from "@repo/ui/sections";
+import { Stats } from "./Sections";
 import React from "react";
 
 export default function Page(): JSX.Element {
