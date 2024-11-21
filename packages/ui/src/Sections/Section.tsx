@@ -47,7 +47,7 @@ export default function Section({
         {foregroundItems?.map(({ item, coordinate }) => (
           <div
             key={`${coordinate.x}-${coordinate.y}-${item.toString()}`}
-            className={`absolute left-[${coordinate.x}] top-[${coordinate.y}vh] z-21`}
+            className={`absolute left-[${coordinate.x}vw] top-[${coordinate.y}vh] z-21`}
           >
             {item}
           </div>
