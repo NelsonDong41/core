@@ -1,7 +1,10 @@
 import React from "react";
 
-type InvalidType = undefined | null
-export type ForegroundItems = { item: Exclude<React.ReactNode, InvalidType>; coordinate: Coordinate }[];
+type InvalidType = undefined | null;
+export type ForegroundItems = {
+  item: Exclude<React.ReactNode, InvalidType>;
+  coordinate: Coordinate;
+}[];
 
 type SectionProps = {
   background: React.ReactNode;
@@ -14,7 +17,6 @@ export type Coordinate = {
   x: number;
   y: number;
 };
-
 
 export default function Section({
   background,
@@ -42,16 +44,14 @@ export default function Section({
         style={{ height: sectionHeight }}
         className={`absolute z-20 w-screen`}
       >
-        {
-          foregroundItems?.map(({ item, coordinate }) => (
-            <div
-              key={`${coordinate.x}-${coordinate.y}-${item.toString()}`}
-              className={`absolute left-[${coordinate.x}] top-[${coordinate.y}vh] z-21`}
-            >
-              {item}
-            </div>
-          ))
-        }
+        {foregroundItems?.map(({ item, coordinate }) => (
+          <div
+            key={`${coordinate.x}-${coordinate.y}-${item.toString()}`}
+            className={`absolute left-[${coordinate.x}] top-[${coordinate.y}vh] z-21`}
+          >
+            {item}
+          </div>
+        ))}
       </div>
     </div>
   );
