@@ -3,8 +3,8 @@
   "private": true,
   "scripts": {
     "build": "turbo build",
-    "dev": "yarn workspace main dev",
-    "dev:live": "yarn workspace live dev",
+    "dev": "yarn workspace main dev & yarn workspace @repo/ui dev",
+    "dev:live": "yarn workspace live dev & yarn workspace @repo/ui dev",
     "lint": "turbo lint",
     "type-check": "turbo type-check",
     "clean": "turbo clean",
