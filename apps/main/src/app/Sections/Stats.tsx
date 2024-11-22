@@ -1,5 +1,6 @@
 import React from "react";
 import { Section } from "@repo/ui";
+import { StreetSign } from "@repo/ui";
 
 const background = <div className="w-full h-full bg-[#BEACD0]" />;
 
@@ -21,10 +22,19 @@ const content = (
 );
 
 export default function Stats(): React.ReactNode {
-  return <Section background={background} content={content} height={40} />;
+  return (
+    <>
+      <Section background={background} content={content} height={40} />
+      <StreetSign streetName="Huntington" suffix="Avenue" />
+    </>
+  );
 }
 
-function Box({ children }: { children: React.ReactNode }): React.ReactNode {
+export function Box({
+  children,
+}: {
+  children: React.ReactNode;
+}): React.ReactNode {
   return (
     <div className="m-12 rounded-lg w-full max-w-[25vw] text-center text-[#474747] flex flex-col justify-center bg-[#FBFBFB]">
       {children}
