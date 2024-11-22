@@ -4,7 +4,7 @@
   "scripts": {
     "build": "turbo build",
     "dev": "yarn turbo run dev -- --filter=@repo/ui --filter=main",
-    "dev:live": "yarn workspace live dev & yarn workspace @repo/ui dev",
+    "dev:live": "yarn turbo run dev -- --filter=@repo/ui --filter=live",
     "lint": "turbo lint",
     "type-check": "turbo type-check",
     "clean": "turbo clean",
