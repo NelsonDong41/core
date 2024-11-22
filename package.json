@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "build": "turbo build",
-    "dev": "yarn workspace main dev & yarn workspace @repo/ui dev",
+    "dev": "yarn turbo run dev -- --filter=@repo/ui --filter=main",
     "dev:live": "yarn workspace live dev & yarn workspace @repo/ui dev",
     "lint": "turbo lint",
     "type-check": "turbo type-check",
