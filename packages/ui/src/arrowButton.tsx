@@ -9,27 +9,32 @@ export enum ArrowType {
 
 interface ArrowButtonProps {
   direction: ArrowType;
-  color: string;
+  bgColor: string;
+  topBorderColor: string;
   onClick: () => void;
 }
 
 export default function ArrowButton({
   onClick,
-  color,
+  bgColor,
+  topBorderColor,
   direction = ArrowType.right,
 }: ArrowButtonProps) {
   return (
     <>
       <button
         onClick={onClick}
-        className={`relative rounded-2xl w-24 h-24 ${color}`}
-        style={{ backgroundColor: color }}
+        className={`relative rounded-2xl w-24 h-24 ${bgColor} ${topBorderColor}`}
+        style={{
+          backgroundColor: bgColor,
+          borderTop: `6px solid ${topBorderColor}`,
+        }}
       >
         {direction === ArrowType.left ? (
           <svg
             width="44"
             height="35"
-            viewBox="0 0 44 35"
+            viewBox="0 0 45 35"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
             className={`translate-x-6`}
