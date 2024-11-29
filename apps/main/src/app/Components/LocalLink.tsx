@@ -16,6 +16,7 @@ type LocalLinkProps = LinkProps & React.HTMLAttributes<HTMLAnchorElement>;
 
 const LocalLink = ({ children, href, className, ...props }: LocalLinkProps) => {
   if (isExternalLink(href)) {
+    /* eslint-disable no-console */
     console.warn("Link leads to external site from local link component");
   }
 
