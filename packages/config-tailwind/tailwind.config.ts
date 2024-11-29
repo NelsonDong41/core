@@ -1,6 +1,6 @@
 import type { Config } from "tailwindcss";
 import { colors, screens } from "./theme-tokens";
-import { wiggle } from "./animations";
+import { wiggle, popAndShrink } from "./animations";
 
 // We want each package to be responsible for its own content.
 const config: Omit<Config, "content"> = {
@@ -12,14 +12,16 @@ const config: Omit<Config, "content"> = {
       },
       keyframes: {
         wiggle: wiggle.keyframes,
+        popAndShrink: popAndShrink.keyframes,
       },
       animation: {
         wiggle: wiggle.animation,
+        popAndShrink: popAndShrink.animation,
       },
     },
     colors,
     screens,
   },
-  plugins: [],
+  plugins: [require("tailwindcss-animated")],
 };
 export default config;

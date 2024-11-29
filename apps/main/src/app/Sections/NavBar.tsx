@@ -4,10 +4,10 @@ import React, { useEffect, useRef, useState } from "react";
 import { HomeIcon, MlhBanner } from "../Assets";
 import LocalLink from "../Components/LocalLink";
 
-const BANNER_DISAPPEAR_DURATION = 300;
+const DELAY = 100;
 
-const useIsAtTopWithDelayedDisappear = () => {
-  const [isAtTop, setIsAtTop] = useState(true);
+const useShouldBeginAnimation = () => {
+  const [shouldBeginAnimation, setShouldBeginAnimation] = useState(false);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
@@ -18,11 +18,11 @@ const useIsAtTopWithDelayedDisappear = () => {
 
       const position = window.scrollY;
       if (position <= 0) {
-        setIsAtTop(true);
+        setShouldBeginAnimation(false);
       } else {
         timeoutRef.current = setTimeout(() => {
-          setIsAtTop(false);
-        }, BANNER_DISAPPEAR_DURATION);
+          setShouldBeginAnimation(true);
+        }, DELAY);
       }
     };
 
@@ -38,11 +38,11 @@ const useIsAtTopWithDelayedDisappear = () => {
     };
   }, []);
 
-  return isAtTop;
+  return shouldBeginAnimation;
 };
 
 const NavBar = () => {
-  const isAtTop = useIsAtTopWithDelayedDisappear();
+  const shouldBeginAnimation = useShouldBeginAnimation();
 
   return (
     <div className="sticky top-0 z-[31] w-full">
@@ -81,11 +81,11 @@ const NavBar = () => {
       </div>
 
       {/* MLH banner */}
-      {isAtTop && (
-        <div className="w-0 h-0 pl-[5vw] animate-wiggle">
-          <MlhBanner />
-        </div>
-      )}
+      <div className={"w-0 h-0 pl-[5vw]"}>
+        <MlhBanner
+          className={`${shouldBeginAnimation ? "animate-popAndShrink" : ""}`}
+        />
+      </div>
     </div>
   );
 };

@@ -1,7 +1,8 @@
 import React from "react";
 
-const MlhBanner = () => (
+const MlhBanner = ({ className }: { className: string }) => (
   <svg
+    className={className}
     width="153"
     height="268"
     viewBox="0 0 153 268"
