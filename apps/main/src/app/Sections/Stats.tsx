@@ -21,7 +21,14 @@ const content = (
 );
 
 export default function Stats(): React.ReactNode {
-  return <Section background={background} content={content} height={40} />;
+  return (
+    <Section
+      name={"stats"}
+      background={background}
+      content={content}
+      height={40}
+    />
+  );
 }
 
 function Box({ children }: { children: React.ReactNode }): React.ReactNode {
