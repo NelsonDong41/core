@@ -1,10 +1,12 @@
 import React from "react";
 
-type ExternalLinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement>;
+type ExternalLinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
+  href: string;
+};
 
-const ExternalLink = ({ children, ...props }: ExternalLinkProps) => {
+const ExternalLink = ({ children, href, ...props }: ExternalLinkProps) => {
   return (
-    <a {...props} target="_blank" rel="noopener noreferrer">
+    <a {...props} href={href} target="_blank" rel="noopener noreferrer">
       {children}
     </a>
   );
