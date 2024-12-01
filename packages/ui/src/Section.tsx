@@ -7,6 +7,7 @@ export type ForegroundItems = {
 }[];
 
 type SectionProps = {
+  name: string;
   background: React.ReactNode;
   content: React.ReactNode;
   foreground?: ForegroundItems;
@@ -19,6 +20,7 @@ export type Coordinate = {
 };
 
 export default function Section({
+  name,
   background,
   content,
   foreground: foregroundItems,
@@ -27,7 +29,7 @@ export default function Section({
   const sectionHeight = `${height}vh`;
 
   return (
-    <div style={{ height: sectionHeight, width: "100vw" }}>
+    <div id={name} style={{ height: sectionHeight, width: "100vw" }}>
       <div
         style={{ height: sectionHeight }}
         className={`absolute z-0 w-screen`}
