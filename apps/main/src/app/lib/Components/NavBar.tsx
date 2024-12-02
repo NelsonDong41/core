@@ -53,22 +53,22 @@ const NavBar = () => {
         </LocalLink>
 
         <div className="flex flex-row align-middle justify-end">
-          <LocalLink href={"#about"} className="text-xl flex items-center px-5">
+          <LocalLink href={"/"} className="text-xl flex items-center px-5">
             About
           </LocalLink>
           <LocalLink
-            href={"#projects"}
+            href={"/projects"}
             className="text-xl flex items-center px-5"
           >
             Projects
           </LocalLink>
           <LocalLink
-            href={"#sponsors"}
+            href={"/sponsors"}
             className="text-xl flex items-center px-5"
           >
             Sponsors
           </LocalLink>
-          <LocalLink href={"#team"} className="text-xl flex items-center px-5">
+          <LocalLink href={"/team"} className="text-xl flex items-center px-5">
             Team
           </LocalLink>
           <LocalLink
