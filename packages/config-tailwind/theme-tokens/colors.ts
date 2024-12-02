@@ -1,18 +1,15 @@
-export type ColorToken = {
-  [key: string]: string;
-};
-
-const colors: ColorToken = {
-  blue: "#1fb6ff",
-  purple: "#7e5bef",
-  pink: "#ff49db",
-  orange: "#ff7849",
-  green: "#13ce66",
-  yellow: "#ffc82c",
-  "gray-dark": "#273444",
-  gray: "#8492a6",
-  "gray-light": "#d3dce6",
-  custom: "#ff7849",
+const colors = {
+  transparent: "transparent",
+  white: "#FBFBFB",
+  orange: "#F5AE55",
+  green: "#84AF67",
+  "light-yellow": "#FFD198",
+  black: "#000000",
+  text: {
+    light: "#FFFFFF",
+    DEFAULT: "#474747",
+    dark: "#474747",
+  },
 };
 
 export default colors;

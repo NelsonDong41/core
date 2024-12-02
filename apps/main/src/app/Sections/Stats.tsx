@@ -1,6 +1,5 @@
 import React from "react";
 import { Section } from "@repo/ui";
-import { StreetSign } from "@repo/ui";
 
 const background = <div className="w-full h-full bg-[#BEACD0]" />;
 
@@ -23,10 +22,12 @@ const content = (
 
 export default function Stats(): React.ReactNode {
   return (
-    <>
-      <Section background={background} content={content} height={40} />
-      <StreetSign streetName="Huntington" suffix="Avenue" />
-    </>
+    <Section
+      name={"stats"}
+      background={background}
+      content={content}
+      height={40}
+    />
   );
 }
 
