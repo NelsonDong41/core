@@ -12,7 +12,7 @@ export default function Page(): JSX.Element {
         name={"projects"}
         background={<ProjectsBackground />}
         content={<ProjectsContent />}
-        height={300}
+        height={500}
       />
       <Footer />
     </main>
