@@ -1,6 +1,6 @@
 "use client";
 
-import { Section } from "@repo/ui";
+import { Instagram, LinkedIn, Section } from "@repo/ui";
 import ExternalLink from "../Components/ExternalLink";
 import LocalLink from "../Components/LocalLink";
 import React, { ChangeEvent, useState } from "react";
@@ -18,10 +18,16 @@ const Footer = () => {
     <div className="grid w-full h-full grid-cols-[1fr_1fr_1.1fr] px-[25vw] text-xl text-black font-GT-Walsheim-Regular">
       <div className="w-full flex flex-col pt-[7vh] gap-4">
         <div>SOCIALS</div>
-        <ExternalLink href="https://www.instagram.com/hackbeanpot/?hl=en">
+        <ExternalLink
+          icon={<Instagram />}
+          href="https://www.instagram.com/hackbeanpot/?hl=en"
+        >
           Instagram
         </ExternalLink>
-        <ExternalLink href="https://www.linkedin.com/company/hackbeanpot-inc">
+        <ExternalLink
+          icon={<LinkedIn />}
+          href="https://www.linkedin.com/company/hackbeanpot-inc"
+        >
           LinkedIn
         </ExternalLink>
       </div>
@@ -63,7 +69,7 @@ const Footer = () => {
       name="footer"
       background={FooterBackground}
       content={FooterContent}
-      height={40}
+      height={50}
     />
   );
 };
