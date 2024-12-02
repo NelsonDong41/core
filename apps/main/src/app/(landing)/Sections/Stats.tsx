@@ -31,7 +31,11 @@ export default function Stats(): React.ReactNode {
   );
 }
 
-function Box({ children }: { children: React.ReactNode }): React.ReactNode {
+export function Box({
+  children,
+}: {
+  children: React.ReactNode;
+}): React.ReactNode {
   return (
     <div className="m-12 rounded-lg w-full max-w-[25vw] text-center text-[#474747] flex flex-col justify-center bg-[#FBFBFB]">
       {children}
