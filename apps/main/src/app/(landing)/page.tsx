@@ -1,6 +1,6 @@
 import { Section } from "@repo/ui";
-import { NavBar } from "./Components";
-import { Footer, Stats } from "./Sections";
+import { Stats } from "./Sections";
+import { Footer, NavBar } from "../lib/Components";
 import React from "react";
 
 export default function Page(): JSX.Element {

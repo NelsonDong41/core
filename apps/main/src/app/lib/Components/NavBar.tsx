@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import { HomeIcon, MlhBanner } from "../Assets/SVG";
-import LocalLink from "../Components/LocalLink";
+import LocalLink from "./LocalLink";
 
 const DELAY = 100;
 

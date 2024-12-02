@@ -1,8 +1,8 @@
 "use client";
 
 import { Section } from "@repo/ui";
-import ExternalLink from "../Components/ExternalLink";
-import LocalLink from "../Components/LocalLink";
+import ExternalLink from "./ExternalLink";
+import LocalLink from "./LocalLink";
 import React, { ChangeEvent, useState } from "react";
 
 const Footer = () => {
