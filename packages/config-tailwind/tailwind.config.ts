@@ -18,6 +18,9 @@ const config: Omit<Config, "content"> = {
         wiggle: wiggle.animation,
         popAndShrink: popAndShrink.animation,
       },
+      fontFamily: {
+        "GT-Walsheim-Regular": ['"GT-Walsheim-Regular"'],
+      },
     },
     colors,
     screens,

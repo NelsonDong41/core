@@ -44,7 +44,7 @@ export default function Section({
       </div>
       <div
         style={{ height: sectionHeight }}
-        className={`absolute z-20 w-screen`}
+        className={`absolute z-20 w-screen pointer-events-none`}
       >
         {foregroundItems?.map(({ item, coordinate }) => (
           <div

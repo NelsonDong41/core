@@ -14,19 +14,14 @@ const isExternalLink = (href: Url) => {
 
 type LocalLinkProps = LinkProps & React.HTMLAttributes<HTMLAnchorElement>;
 
-const LocalLink = ({ children, href, className, ...props }: LocalLinkProps) => {
+const LocalLink = ({ children, href, ...props }: LocalLinkProps) => {
   if (isExternalLink(href)) {
     /* eslint-disable no-console */
     console.warn("Link leads to external site from local link component");
   }
 
   return (
-    <Link
-      {...props}
-      href={href}
-      scroll={true}
-      className={"flex items-center px-5 ".concat(className || "")}
-    >
+    <Link {...props} href={href} scroll={true}>
       {children}
     </Link>
   );

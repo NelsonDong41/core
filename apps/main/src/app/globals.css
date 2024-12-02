@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: 'GT-Walsheim-Regular';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url('./Assets/fonts/GT-Walsheim-Regular.woff') format('woff2');
+    }
+}

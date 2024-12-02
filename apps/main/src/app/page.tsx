@@ -1,6 +1,6 @@
 import { Section } from "@repo/ui";
 import { NavBar } from "./Components";
-import { Stats } from "./Sections";
+import { Footer, Stats } from "./Sections";
 import React from "react";
 
 export default function Page(): JSX.Element {
@@ -39,6 +39,7 @@ export default function Page(): JSX.Element {
         content={<></>}
         height={70}
       />
+      <Footer />
     </main>
   );
 }
