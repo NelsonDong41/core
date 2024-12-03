@@ -32,6 +32,5 @@
     "eslint": "^9.14.0",
     "postcss": "^8.4.35",
     "tailwindcss": "^3.4.1"
-  },
-  "dependencies": {}
+  }
 }
