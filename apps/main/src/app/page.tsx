@@ -1,3 +1,5 @@
+"use client";
+
 import { Stats } from "./Sections";
 import React from "react";
 
