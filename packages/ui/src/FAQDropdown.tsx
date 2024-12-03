@@ -48,24 +48,22 @@ export default function FAQDropdown({
   };
 
   return (
-    <>
+    <div
+      onClick={toggleAccordion}
+      className={`relative rounded-lg w-3/5 bg-[#FBFBFB] text-[#3F3F3F] grid grid-cols-2 place-content-around py-5 px-8 transition-all duration-300 ${isOpen ? "max-h-screen" : "max-h-16"}`}
+    >
+      <p className="text-lg ">{dropdownQuestion}</p>
       <div
-        onClick={toggleAccordion}
-        className={`relative rounded-lg w-3/5 bg-[#FBFBFB] text-[#3F3F3F] grid grid-cols-2 place-content-around py-5 px-8 transition-all duration-300 ${isOpen ? "max-h-screen" : "max-h-16"}`}
+        className={`w-6 h-6  place-self-end transition-transform duration-500 transform ${isOpen ? "rotate-180" : "rotate-0"}`}
       >
-        <p className="text-lg ">{dropdownQuestion}</p>
-        <div
-          className={`w-6 h-6  place-self-end transition-transform duration-500 transform ${isOpen ? "rotate-180" : "rotate-0"}`}
-        >
-          {isOpen ? minusSign : plusSign}
-        </div>
-        {isOpen && (
-          <div className="w-auto col-span-2 border-t border-[#CFCFCF] flex items-center justify-center m-2"></div>
-        )}
-        {isOpen && (
-          <p className="text-lg col-span-2 break-all">{dropdownAnswer}</p>
-        )}
+        {isOpen ? minusSign : plusSign}
       </div>
-    </>
+      {isOpen && (
+        <div className="w-auto col-span-2 border-t border-[#CFCFCF] flex items-center justify-center m-2"></div>
+      )}
+      {isOpen && (
+        <p className="text-lg col-span-2 break-all">{dropdownAnswer}</p>
+      )}
+    </div>
   );
 }
