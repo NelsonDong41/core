@@ -10,6 +10,6 @@
         font-style: normal;
         font-weight: 400;
         font-display: swap;
-        src: url('./Assets/fonts/GT-Walsheim-Regular.woff') format('woff2');
+        src: url('./lib/Assets/fonts/GT-Walsheim-Regular.woff') format('woff2');
     }
 }
