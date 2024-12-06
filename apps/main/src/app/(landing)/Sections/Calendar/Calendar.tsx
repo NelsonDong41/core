@@ -24,11 +24,13 @@ export function CalendarEvent({
   return (
     <div className="flex justify-center items-center">
       <TitleBox
-        topColor={"[#EFAB57]"}
+        topColor={"orange"}
         bottomColor={"white"}
         topComponent={
           <div className="p-1">
-            <p className="text-center text-white text-xl mb-[-4px]">{month}</p>
+            <p className="text-center text-white text-xl mb-[-4px] font-GT-Walsheim-Regular">
+              {month}
+            </p>
             <p className="text-center text-white text-2xl">{date}</p>
           </div>
         }
