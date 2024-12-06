@@ -13,6 +13,14 @@ const colors: ColorToken = {
   gray: "#8492a6",
   "gray-light": "#d3dce6",
   custom: "#ff7849",
+
+  grapePurple: "#6D5881",
+  biege: "#F3E7D7",
+  leafGreen: "#6B9D8F",
+  darkPurple: "#5A476A",
+  darkBeige: "#C6B6A9",
+  darkGreen: "#4C7764",
+  black: "#333333",
 };
 
 export default colors;
