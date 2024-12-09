@@ -26,7 +26,7 @@ const ArrowButtonType = {
 interface ArrowButtonProps {
   direction: ArrowType;
   arrowButtonColor: ArrowButtonStyleKey;
-  onClick: () => void;
+  onClick: (event: React.MouseEvent<HTMLElement, MouseEvent>) => void;
 }
 
 export default function ArrowButton({
