@@ -1,5 +1,7 @@
 "use client";
 
+/* NOTE: any file that uses the useIsMobile hook will need to add "use client" as done above */
+
 import { screens } from "@repo/tailwind-config/tokens";
 import { useState, useEffect } from "react";
 

@@ -1,6 +1,5 @@
 import React from "react";
 import { Section } from "@repo/ui";
-// import { useIsMobile } from "@repo/util/hooks";
 const background = <div className="w-full h-full bg-[#BEACD0]" />;
 
 const content = (
@@ -21,7 +20,6 @@ const content = (
 );
 
 export default function Stats(): React.ReactNode {
-  // const isMobile = useIsMobile();
   return (
     <Section
       name={"stats"}
