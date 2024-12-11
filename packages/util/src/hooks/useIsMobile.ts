@@ -10,7 +10,7 @@ const useIsMobile = () => {
 
   useEffect(() => {
     const checkIsMobile = () => {
-      setIsMobile(window.innerWidth < screens.mobile);
+      setIsMobile(window.matchMedia(`(max-width: ${screens.mobile})`).matches);
     };
 
     checkIsMobile();
