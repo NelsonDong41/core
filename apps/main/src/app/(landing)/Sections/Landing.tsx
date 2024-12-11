@@ -11,26 +11,44 @@ export default function Landing(): JSX.Element {
   );
 
   const content = (
-    <div className="w-full h-full flex gap-2 items-start justify-end p-5">
-      <ExternalLink href="https://www.instagram.com/hackbeanpot/?hl=en">
+    <div className="relative w-full h-full flex flex-col justify-center items-center gap-4">
+      <div className="flex flex-col items-center">
         <Image
-          alt="InstagramLogo"
-          src="/instagram_logo.png"
-          width={40}
-          height={40}
+          alt="LisencePlate"
+          src="/lisence_plate.png"
+          width={400}
+          height={200}
+          className="w-[35vw] h-auto max-w-[600px] min-w-[150px]"
         />
-      </ExternalLink>
-      <ExternalLink href="https://www.linkedin.com/company/hackbeanpot-inc/posts/?feedView=all">
         <Image
-          alt="LinkedinLogo"
-          src="/linkedin_logo.png"
-          width={40}
-          height={40}
+          alt="Bus"
+          src="/bus.png"
+          width={400}
+          height={200}
+          className="w-[35vw] h-auto max-w-[600px] min-w-[200px] mt-20"
         />
-      </ExternalLink>
-      <ExternalLink href="">
-        <Image alt="EmailLogo" src="/email_logo.png" width={40} height={40} />
-      </ExternalLink>
+      </div>
+      <div className="absolute top-5 right-5 flex gap-2">
+        <ExternalLink href="https://www.instagram.com/hackbeanpot/?hl=en">
+          <Image
+            alt="InstagramLogo"
+            src="/instagram_logo.png"
+            width={40}
+            height={40}
+          />
+        </ExternalLink>
+        <ExternalLink href="https://www.linkedin.com/company/hackbeanpot-inc/posts/?feedView=all">
+          <Image
+            alt="LinkedinLogo"
+            src="/linkedin_logo.png"
+            width={40}
+            height={40}
+          />
+        </ExternalLink>
+        <ExternalLink href="">
+          <Image alt="EmailLogo" src="/email_logo.png" width={40} height={40} />
+        </ExternalLink>
+      </div>
     </div>
   );
 
