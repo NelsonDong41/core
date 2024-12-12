@@ -39,7 +39,7 @@ export default function ArrowButton({
     <>
       <button
         onClick={onClick}
-        className={`relative rounded-2xl w-24 h-24 ${bgColor} ${topBorder} border-t-4`}
+        className={`relative rounded-arrow w-24 h-24 ${bgColor} ${topBorder} border-t-4`}
       >
         {direction === "left" ? (
           <LeftArrow arrowColor={arrowColor} />
