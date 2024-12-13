@@ -1,6 +1,5 @@
 import React from "react";
 import { Section } from "@repo/ui";
-
 const background = <div className="w-full h-full bg-[#BEACD0]" />;
 
 const content = (
