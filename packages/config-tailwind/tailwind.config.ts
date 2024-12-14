@@ -22,6 +22,9 @@ const config: Omit<Config, "content"> = {
         "GT-Walsheim-Regular": ['"GT-Walsheim-Regular"'],
         "Big-Shoulders-Display": ['"Big-Shoulders-Display"', "cursive"],
       },
+      borderRadius: {
+        arrow: "31.5px",
+      },
     },
     colors,
     screens,
