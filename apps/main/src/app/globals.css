@@ -17,4 +17,12 @@
         font-display: swap;
         src: url('./lib/Assets/fonts/BigShouldersDisplay-Regular.ttf') format('ttf');
     }
+
+    @font-face {
+        font-family: 'Wilden';
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url('./lib/Assets/fonts/Wilden.otf') format('opentype');
+    }
 }
